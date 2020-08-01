@@ -1,26 +1,6 @@
-<<<<<<< HEAD
-# vueProject-Vue
-vueProject项目的前端Vue部分
-=======
-# firstproject
+# vueProject前端部分
 
-> A Vue.js project
+采用vuecli搭建，vue+element+echarts
 
-## Build Setup
+后端项目仓库：[*<u>https://github.com/Y-Meta/vueProject</u>*](https://github.com/Y-Meta/vueProject)
 
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
->>>>>>> 43c94e6... init
