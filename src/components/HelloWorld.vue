@@ -1,24 +1,32 @@
 <template>
-  <div class="main">
-    <el-carousel indicator-position="outside">
-      <el-carousel-item v-for="item in carouselList" :key="item.key">
-        <img :src="item.src" />
-      </el-carousel-item>
-    </el-carousel>
-    <div class="time-line">
-      <el-timeline>
-        <el-timeline-item
-          v-for="(activity, index) in activities"
-          :key="index"
-          :icon="activity.icon"
-          :type="activity.type"
-          :color="activity.color"
-          :size="activity.size"
-          :timestamp="activity.timestamp"
-        >{{activity.content}}</el-timeline-item>
-      </el-timeline>
-    </div>
-  </div>
+  <el-container class="main">
+    <el-header height="300">
+          <el-carousel indicator-position="none">
+            <el-carousel-item v-for="item in carouselList" :key="item.key">
+              <img :src="item.src" />
+            </el-carousel-item>
+          </el-carousel>
+    </el-header>
+    <el-main>
+      <el-container>
+        <el-aside>
+          <el-timeline>
+            <el-timeline-item
+              v-for="(activity, index) in activities"
+              :key="index"
+              :icon="activity.icon"
+              :type="activity.type"
+              :color="activity.color"
+              :size="activity.size"
+              :timestamp="activity.timestamp"
+            >{{activity.content}}</el-timeline-item>
+          </el-timeline>
+        </el-aside>
+        <el-main></el-main>
+      </el-container>
+    </el-main>
+    <el-footer></el-footer>
+  </el-container>
 </template>
 
 <script>
@@ -58,9 +66,46 @@ body {
   margin: 0;
   padding: 0;
 }
-.time-line {
-  
+.el-header {
+  background-color: #b3c0d1;
+  color: #333;
+  text-align: center;
+  line-height: 500px;
 }
+.el-footer {
+  background-color: #b3c0d1;
+  color: #333;
+  text-align: center;
+  line-height: 60px;
+}
+
+.el-aside {
+  background-color: #79a2d1;
+  color: #333;
+  text-align: center;
+  line-height: 200px;
+}
+
+.el-main {
+  background-color: #e9eef3;
+  color: #333;
+  text-align: center;
+  line-height: 160px;
+}
+
+body > .el-container {
+  margin-bottom: 40px;
+}
+
+.el-container:nth-child(5) .el-aside,
+.el-container:nth-child(6) .el-aside {
+  line-height: 260px;
+}
+
+.el-container:nth-child(7) .el-aside {
+  line-height: 320px;
+}
+
 .el-carousel__item h3 {
   color: #475669;
   font-size: 18px;
@@ -68,12 +113,18 @@ body {
   line-height: 300px;
   margin: 0;
 }
-
+.grid-content {
+  border-radius: 4px;
+  min-height: 36px;
+}
 .el-carousel__item:nth-child(2n) {
   background-color: #99a9bf;
 }
 
 .el-carousel__item:nth-child(2n + 1) {
   background-color: #d3dce6;
+}
+.bg-purple-dark {
+  background: #9a60dd;
 }
 </style>
