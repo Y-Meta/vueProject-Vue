@@ -22,7 +22,9 @@
             >{{activity.content}}</el-timeline-item>
           </el-timeline>
         </el-aside>
-        <el-main></el-main>
+        <el-main>
+          <el-input class="input-test">请输入......</el-input>
+        </el-main>
       </el-container>
     </el-main>
     <el-footer></el-footer>
@@ -80,10 +82,11 @@ body {
 }
 
 .el-aside {
-  background-color: #79a2d1;
+  background-color: #2b3541;
   color: #333;
-  text-align: center;
+  /* text-align: center; */
   line-height: 200px;
+  padding: 20px;
 }
 
 .el-main {
@@ -123,8 +126,5 @@ body > .el-container {
 
 .el-carousel__item:nth-child(2n + 1) {
   background-color: #d3dce6;
-}
-.bg-purple-dark {
-  background: #9a60dd;
 }
 </style>
